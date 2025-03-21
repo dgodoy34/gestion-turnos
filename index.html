@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Turnos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white p-3">
+        <div class="container d-flex align-items-center">
+            <img src="./img/images.jpegconsole.log("Gestión de Turnos - Inicio de la aplicación");
+console.log("Cargando datos de la página...");
+console.log("Sección de solicitar turno cargada.");
+console.log("Sección de turnos programados cargada.");
+console.log("Sección de historial de turnos cargada.");
+console.log("Modal de turno solicitado cargado.");console.log("Sección de solicitar turno cargada.");
+console.log("Sección de turnos programados cargada.");
+console.log("Sección de historial de turnos cargada.");
+console.log("Modal de turno solicitado cargado.");" alt="Logo" class="mr-3" style="max-height: 50px;">
+            <h1 class="mb-0">Gestión de Turnos</h1>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <section id="solicitar-turno" class="mb-4">
+            <div class="card p-4">
+                <h2>Solicitar Turno</h2>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="notas">Notas:</label>
+                    <textarea id="notas" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="col-auto">
+                    <button id="solicitar" class="btn btn-primary btn-sm">Solicitar Turno</button>
+                </div>
+            </div>
+        </section>
+        <section id="turnos-programados">
+            <h2>Turnos Programados</h2>
+            <ul id="lista-turnos" class="list-group">
+            </ul>
+        </section>
+        <section id="historial-turnos" class="mt-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2>Historial de Turnos</h2>
+                <button id="borrar-historial" class="btn btn-danger btn-sm">Borrar Historial</button>
+            </div>
+            <ul id="lista-historial" class="list-group">
+            </ul>
+        </section>
+    </main>
+
+    <div class="modal fade" id="turnoModal" tabindex="-1" role="dialog" aria-labelledby="turnoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="turnoModalLabel">Turno Solicitado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="turnoModalMensaje"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
